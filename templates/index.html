@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="psychAI - Mental Health Chatbot">
+  <meta http-for="textInput" content="noindex">
+  <title>psychAI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+  <div class="chat-container">
+    <header>
+      <h1>psychAI</h1>
+    </header>
+    <div class="chat-box" id="chatbox">
+      <div class="chat-message bot">
+        <img src="{{ url_for('static', filename='img/mhcicon.png') }}" alt="Bot">
+        <p>Hello! I'm psychAI, here to listen and help. How are you feeling today?</p>
+      </div>
+    </div>
+    <div class="user-input">
+      <input type="text" id="textInput" placeholder="Type your message here..." aria-label="Message input">
+      <button id="sendButton" type="button" aria-label="Send message">Send</button>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/bot.js') }}"></script>
+</body>
+</html>
